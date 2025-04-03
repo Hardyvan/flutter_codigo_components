@@ -22,12 +22,12 @@ class CardPage extends StatelessWidget {
               borderRadius: BorderRadius.circular(18.0),
               boxShadow: [
                 BoxShadow(
-                  color: Colors.redAccent,
+                  color: Colors.white,
                   offset: const Offset(4, 4),
                   blurRadius: 10.0,
                 ),
                 const BoxShadow(
-                  color: Colors.redAccent,
+                  color: Colors.white,
                   offset: Offset(-5, -5),
                   blurRadius: 6.0,
                 ),
