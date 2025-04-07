@@ -13,6 +13,7 @@ class CardPage extends StatelessWidget {
       ),
       body: Column(
         children: [
+          //card 1
           Container(
             margin: const EdgeInsets.all(18.0),
             padding: const EdgeInsets.all(11.0),
@@ -46,7 +47,7 @@ class CardPage extends StatelessWidget {
                 ),
                 Container(
                   margin: const EdgeInsets.symmetric(vertical: 10.0),
-                  padding: const EdgeInsets.symmetric(vertical: 12.0) ,
+                  padding: const EdgeInsets.symmetric(vertical: 12.0),
                   width: double.infinity,
                   //height: 40.0,
                   decoration: BoxDecoration(
@@ -54,15 +55,16 @@ class CardPage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(40.0),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.deepPurpleAccent.withOpacity(0.07),
+                        color: Colors.deepPurpleAccent.withOpacity(
+                          0.07,
+                        ),
                         blurRadius: 10,
-                        offset: const Offset(4, 4)
-                      )
-
-                    ]
+                        offset: const Offset(4, 4),
+                      ),
+                    ],
                   ),
                   alignment: Alignment.center,
-                  child:  const Text(
+                  child: const Text(
                     "Follow me",
                     style: TextStyle(
                       color: Colors.white,
@@ -71,6 +73,48 @@ class CardPage extends StatelessWidget {
                     ),
                   ),
                 ),
+              ],
+            ),
+          ),
+
+          //card 2
+          Container(
+            color: Colors.blue,
+
+            child: Row(
+              children: [
+                Image.asset(
+                  'assets/images/imagex1.png',
+                  height: 120.0,
+                ),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text("Fiorella de las nieves azules",
+                      style: TextStyle(
+                        color: Colors.black87,
+                        fontSize:15.0,
+                        fontWeight: FontWeight.bold,
+                      ),
+                        ),
+                      Text("Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó humor, o palabras aleatorias que no parecen ni un poco creíbles. Si vas a utilizar un pasaje de Lorem Ipsum, necesitás estar seguro de que no hay nada avergonzante escondido en el medio del texto. Todos los generadores de Lorem Ipsum que se encuentran en Internet tienden a repetir trozos predefinidos cuando sea necesario, haciendo a este el único generador verdadero (válido) en la Internet. Usa un diccionario de mas de 200 palabras provenientes del latín, combinadas con estructuras muy útiles de sentencias, para generar texto de Lorem Ipsum que parezca razonable. Este Lorem Ipsum generado siempre estará libre de repeticiones, humor agregado o palabras no características del lenguaje, etc.",
+
+                      overflow: TextOverflow.ellipsis,
+                        maxLines: 4,
+                        style: TextStyle(
+                          color: Colors.black54,
+
+                        )
+
+
+                      ),
+
+
+                    ],
+
+                  ),
+                )
               ],
             ),
           ),
