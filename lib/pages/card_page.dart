@@ -79,7 +79,26 @@ class CardPage extends StatelessWidget {
 
           //card 2
           Container(
-            color: Colors.blue,
+            margin: const EdgeInsets.symmetric(
+              vertical: 12.0,
+              horizontal: 16.0,
+            ),
+            padding: const EdgeInsets.symmetric(
+              horizontal: 10.0,
+              vertical: 12.0,
+            ),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(14.0),
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withOpacity(0.06),
+                  offset: const Offset(4, 4),
+                  blurRadius: 12.0,
+                ),
+              ],
+            ),
+
 
             child: Row(
               children: [
@@ -87,35 +106,51 @@ class CardPage extends StatelessWidget {
                   'assets/images/imagex1.png',
                   height: 120.0,
                 ),
+                SizedBox(width: 4.0),
                 Expanded(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("Fiorella de las nieves azules",
-                      style: TextStyle(
-                        color: Colors.black87,
-                        fontSize:15.0,
-                        fontWeight: FontWeight.bold,
-                      ),
-                        ),
-                      Text("Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó humor, o palabras aleatorias que no parecen ni un poco creíbles. Si vas a utilizar un pasaje de Lorem Ipsum, necesitás estar seguro de que no hay nada avergonzante escondido en el medio del texto. Todos los generadores de Lorem Ipsum que se encuentran en Internet tienden a repetir trozos predefinidos cuando sea necesario, haciendo a este el único generador verdadero (válido) en la Internet. Usa un diccionario de mas de 200 palabras provenientes del latín, combinadas con estructuras muy útiles de sentencias, para generar texto de Lorem Ipsum que parezca razonable. Este Lorem Ipsum generado siempre estará libre de repeticiones, humor agregado o palabras no características del lenguaje, etc.",
-
-                      overflow: TextOverflow.ellipsis,
-                        maxLines: 4,
+                      Text(
+                        "Fiorella de las nieves azules",
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
                         style: TextStyle(
-                          color: Colors.black54,
-
-                        )
-
-
+                          color: Colors.black87,
+                          fontSize: 15.0,
+                          fontWeight: FontWeight.bold,
+                        ),
                       ),
+                      SizedBox(height: 4.0),
+                      Text(
+                        "Hay muchas variaciones de los pasajes de Lorem Ipsum disponibles, pero la mayoría sufrió alteraciones en alguna manera, ya sea porque se le agregó humor, o palabras aleatorias que no parecen ni un poco creíbles. Si vas a utilizar un pasaje de Lorem Ipsum, necesitás estar seguro de que no hay nada avergonzante escondido en el medio del texto. Todos los generadores de Lorem Ipsum que se encuentran en Internet tienden a repetir trozos predefinidos cuando sea necesario, haciendo a este el único generador verdadero (válido) en la Internet. Usa un diccionario de mas de 200 palabras provenientes del latín, combinadas con estructuras muy útiles de sentencias, para generar texto de Lorem Ipsum que parezca razonable. Este Lorem Ipsum generado siempre estará libre de repeticiones, humor agregado o palabras no características del lenguaje, etc.",
 
-
+                        overflow: TextOverflow.ellipsis,
+                        maxLines: 4,
+                        style: TextStyle(color: Colors.black54),
+                      ),
                     ],
-
                   ),
-                )
+                ),
               ],
+            ),
+          ),
+          //card 3
+
+          Container(
+            color: Colors.blue,
+            child: Row(
+              children: [
+                Expanded(
+                    child: Text(
+                        "Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas, las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum"),
+
+                ),
+                
+                Image.network("https://images.pexels.com/photos/30411875/pexels-photo-30411875/free-photo-of-retrato-de-una-mujer-joven-con-flores-de-cosmos-en-hanoi.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2")
+              ],
+
+
             ),
           ),
         ],
