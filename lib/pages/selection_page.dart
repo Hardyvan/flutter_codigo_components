@@ -9,6 +9,7 @@ class SelectionPage extends StatefulWidget {
 
 class _SelectionPageState extends State<SelectionPage> {
   TextEditingController dateController = TextEditingController();
+  int selectedValue = 1;
   selectedDate() async {
     DateTime? dateSelected = await showDatePicker(
       context: context,
@@ -37,6 +38,52 @@ class _SelectionPageState extends State<SelectionPage> {
                 FocusScope.of(context).requestFocus(FocusNode());
                 selectedDate();
               },
+            ),
+            const SizedBox(height: 30.0),
+            Container(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 12.0,
+                vertical: 4.0,
+              ),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(14.0),
+                boxShadow: [
+                  BoxShadow(
+                    color: Colors.black.withOpacity(0.07),
+                    blurRadius: 12,
+                    offset: const Offset(4, 4),
+                  ),
+                ],
+              ),
+              child: DropdownButton(
+                isExpanded: true,
+                underline: Container(),
+                icon: const Icon(
+                  Icons.keyboard_arrow_down,
+                  color: Colors.blueGrey,
+                ),
+                value: selectedValue,
+
+                items: const [
+                  DropdownMenuItem(
+                    child: Text("Elemento 1"),
+                    value: 1,
+                  ),
+                  DropdownMenuItem(
+                    child: Text("Elemento 2"),
+                    value: 2,
+                  ),
+                  DropdownMenuItem(
+                    child: Text("Elemento 3"),
+                    value: 3,
+                  ),
+                ],
+                onChanged: (int? value) {
+                  selectedValue = value!;
+                  setState(() {});
+                },
+              ),
             ),
           ],
         ),
