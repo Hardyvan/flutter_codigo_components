@@ -82,7 +82,6 @@ class AlertPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
 
                 children: [
-
                   TextButton(
                     onPressed: () {},
                     child: Text("Cancelar"),

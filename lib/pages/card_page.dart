@@ -46,8 +46,12 @@ class CardPage extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    margin: const EdgeInsets.symmetric(vertical: 10.0),
-                    padding: const EdgeInsets.symmetric(vertical: 12.0),
+                    margin: const EdgeInsets.symmetric(
+                      vertical: 10.0,
+                    ),
+                    padding: const EdgeInsets.symmetric(
+                      vertical: 12.0,
+                    ),
                     width: double.infinity,
                     //height: 40.0,
                     decoration: BoxDecoration(
@@ -174,8 +178,6 @@ class CardPage extends StatelessWidget {
                 ],
               ),
             ),
-
-
           ],
         ),
       ),
